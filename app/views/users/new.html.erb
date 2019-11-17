@@ -1,1 +1,21 @@
-<p>Hello</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ユーザー一覧</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1 id="applicationTitle">UserManagement</h1>
+    </div>
+    <div id="container">
+      <form id="inputFields">
+          <input class="inputField" type="text" placeholder="nameを入力してください">
+          <input class="inputField" type="text" placeholder="emailを入力してください">
+          <input class="inputField" type="text" placeholder="passwordを入力してください">
+          <input class="inputField" type="text" placeholder="confirmation password">
+          <%= link_to "submit", "#", id: "createBtn" %>
+      </form>
+    </div>
+  </body>
+</html>
