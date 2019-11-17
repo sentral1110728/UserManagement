@@ -1,3 +1,58 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+table{
+  padding: 30px;
+}
+
+tr{
+}
+
+th{
+  padding-bottom: 10px;
+}
+
+td{
+  padding: 5px;
+  background-color: white;
+}
+
+#header{
+  background-color: #CCFFFF;
+  padding: 5px 10px;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+}
+
+#innerContainer{
+  padding: 20px;
+  background-color: #EEEEEE;
+}
+
+#showBtn{
+  background-color: #CCFFFF;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#deleteBtn{
+  background-color: red;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#createBtn{
+  background-color :#CCFFFF;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#createBtn:hover,#showBtn:hover,#deleteBtn:hover{
+  background-color: black;
+  color: white;
+}
