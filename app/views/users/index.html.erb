@@ -18,14 +18,16 @@
             <th></th>
             <th></th>
           <tbody>
-            <tr>
-              <td>no_field</td>
-              <td>nanme_field</td>
-              <td>mailaddres_field</td>
-              <td>password_field</td>
-              <td><button id="showBtn" href="#">show</button></td>
-              <td><button id="deleteBtn" href="#">delete</button></td>
-            </tr>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.password %></td>
+                <td><button id="showBtn" href="#">show</button></td>
+                <td><button id="deleteBtn" href="#">delete</button></td>
+              </tr>
+            <% end %>
           </tbody>
         </table>
         <%= link_to "new user create", new_user_path, id: "createBtn" %>
