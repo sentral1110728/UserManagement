@@ -5,9 +5,7 @@
   </head>
 
   <body>
-    <div id="header">
-      <h1 id="applicationTitle">UserManagement</h1>
-    </div>
+  <%= render :partial => "header" %>
     <div id="container">
       <%= form_with model: @user, local: true, id: :inputFields do |f| %>
         <%= f.text_field :name, class: :inputField, placeholder: :nameを入力してください %>
