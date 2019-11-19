@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ユーザー一覧</title>
-  </head>
-
-  <body>
-  <%= render :partial => "header" %>
-    <div id="container">
-      <%= form_with model: @user, local: true, id: :inputFields do |f| %>
-        <%= f.text_field :name, class: :inputField, placeholder: :nameを入力してください %>
-        <%= f.text_field :email, class: :inputField, placeholder: :emailを入力してください %>
-        <%= f.text_field :password, class: :inputField, placeholder: :passwordを入力してください %>
-        <%= f.text_field :password_confirmation, class: :inputField, placeholder: :もう一度同じpasswordを入力してください %>
-        <%= f.submit "submit", id: :submit %>
-      <% end %>
-    </div>
-  </body>
-</html>
+<body>
+<%= render :partial => "header" %>
+  <div id="container">
+    <%= form_with model: @user, local: true, id: :inputFields do |f| %>
+      <%= render 'layouts/error_messages' %>
+      <%= f.text_field :name, class: :inputField, placeholder: :nameを入力してください %>
+      <%= f.text_field :email, class: :inputField, placeholder: :emailを入力してください %>
+      <%= f.text_field :password, class: :inputField, placeholder: :passwordを入力してください %>
+      <%= f.text_field :password_confirmation, class: :inputField, placeholder: :もう一度同じpasswordを入力してください %>
+      <%= f.submit "submit", id: :submit %>
+    <% end %>
+  </div>
+</body>

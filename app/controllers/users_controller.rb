@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to action: :index
     else
-      redirect_to action: :new
+      render 'new'
     end
   end
 
