@@ -22,9 +22,23 @@ class UsersController < ApplicationController
     redirect_to action: :index
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    user = User.find(params[:id])
+    if user.update(user_params)
+      redirect_to action: :index
+    else
+      binding.pry
+      redirect_to action: :index
+    end
+  end
+
 
   private
   def user_params
-    params.require(:user).permit(:name, :email, :password_digest)
+    params.require(:user).permit(:name, :email, :password)
   end
 end

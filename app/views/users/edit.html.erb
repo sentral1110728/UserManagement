@@ -1,0 +1,12 @@
+<body>
+<%= render :partial => "header" %>
+  <div id="container">
+    <%= form_with model: @user, local: true, id: :inputFields do |f| %>
+      <%= render 'layouts/error_messages' %>
+      <%= f.text_field :name, class: :inputField, placeholder: :nameを入力してください %>
+      <%= f.text_field :email, class: :inputField, placeholder: :emailを入力してください %>
+      <%= f.password_field :password, class: :inputField, placeholder: :passwordを入力してください %>
+      <%= f.submit "submit", id: :submit %>
+    <% end %>
+  </div>
+</body>
