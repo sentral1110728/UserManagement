@@ -63,3 +63,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'pry-byebug'
 gem 'rails-i18n'
+gem 'bcrypt', '3.1.11'
