@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ユーザー一覧</title>
+  </head>
+  <body>
+  <%= render :partial => "header" %>
+    <div id="container">
+      <div id="innerContainer">
+        <table id="usersData">
+            <th>no</th>
+            <th>name</th>
+            <th>mailaddres</th>
+            <th>password</th>
+            <th></th>
+            <th></th>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td><%= user.password_digest %></td>
+                <td><button id="showBtn" href="#">show</button></td>
+                <td><button id="deleteBtn" href="#">delete</button></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= link_to "new user create", new_user_path, id: "createBtn" %>
+      </div>
+    </div>
+  </body>
+</html>
