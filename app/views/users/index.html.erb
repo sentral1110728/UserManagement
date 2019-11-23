@@ -22,7 +22,7 @@
                 <td><%= user.email %></td>
                 <td><%= user.password_digest %></td>
                 <td><button id="showBtn" href="#">show</button></td>
-                <td><button id="deleteBtn" href="#">delete</button></td>
+                <td><%= link_to '削除', user_path(user), method: :delete, id: :deleteBtn %></td>
               </tr>
             <% end %>
           </tbody>
